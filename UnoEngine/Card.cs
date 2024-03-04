@@ -4,22 +4,30 @@ namespace UnoEngine;
 
 public class Card
 {
-    public readonly CardType Type;
-    public readonly CardColor Color;
-    
-    
-    public readonly string Name => 
+    private readonly CardProperties _properties;
     
     
     public Card(CardProperties properties)
     {
-        Type = properties.Type;
-        Color = properties.Color;
+        _properties = properties;
     }
     
     
-    public void CanStack(Card other)
+    public bool CanStack(Card other)
     {
+        if (_properties.Type == other._properties.Type)
+            return true;
         
+        if (_properties.Color == other._properties.Color)
+            return true;
+        
+        
+        return false;
     }
+
+    public override string ToString()
+    {
+        return $"{_properties.Color} {_properties.Type}";
+    }
+    
 }

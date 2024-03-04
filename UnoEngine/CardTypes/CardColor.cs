@@ -1,4 +1,4 @@
-﻿namespace UnoEngine.CardProperties;
+﻿namespace UnoEngine.CardTypes;
 
 public enum CardColor
 {

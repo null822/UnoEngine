@@ -1,12 +1,18 @@
-﻿namespace UnoEngine.CardProperties;
+﻿namespace UnoEngine.CardTypes;
 
 public struct CardProperties
 {
-    public CardType Type;
-    public CardColor Color;
+    public readonly CardType Type;
+    public readonly CardColor Color;
 
-    public override CardProperties (int v)
+    public CardProperties(CardType type, CardColor color)
     {
-        
+        Type = type;
+        Color = color;
+    }
+    
+    public static implicit operator CardProperties((CardType type, CardColor color) tuple)
+    {
+        return new CardProperties(tuple.type, tuple.color);
     }
 }

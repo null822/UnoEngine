@@ -1,7 +1,9 @@
-﻿namespace UnoEngine.CardProperties;
+﻿namespace UnoEngine.CardTypes;
 
 public enum CardType
 {
+    None,
+    
     N0,
     N1,
     N2,
