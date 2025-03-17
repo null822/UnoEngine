@@ -1,6 +1,7 @@
 ﻿namespace UnoEngine;
 
-public static class Constants
+public enum EffectType
 {
+    Draw,
     
 }
